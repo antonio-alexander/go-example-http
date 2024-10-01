@@ -1,0 +1,38 @@
+services:
+
+  go-example-http:
+    container_name: go-example-http
+    hostname: go-example-http
+    image: ghcr.io/antonio-alexander/go-example-http:latest
+    restart: "always"
+    build:
+      context: .
+      dockerfile: ./cmd/Dockerfile
+      args:
+        PLATFORM: linux/amd64
+        GO_ARCH: amd64
+    ports:
+      - "8080:80"
+      - "8081:443"
+    environment:
+      HTTP_PORT: "80"
+      HTTPS_PORT: "443"
+      CERT_FILE: ${CERT_FILE:-/certs/ssl.crt}
+      KEY_FILE: ${KEY_FILE:-/certs/ssl.key}
+    volumes:
+      - certs:/certs
+      - tmp:/tmp
+
+volumes:
+  tmp:
+    driver: local
+    driver_opts:
+      device: ./tmp
+      o: bind
+      type: local
+  certs:
+    driver: local
+    driver_opts:
+      device: ./certs
+      o: bind
+      type: local
