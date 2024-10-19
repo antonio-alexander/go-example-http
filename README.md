@@ -57,3 +57,5 @@ Here are a list of links I used while trying to put this together (a lot are fro
 - [https://gist.github.com/nguyendangminh/bd6e1e01df3c6cff139b1609fc1a646c](https://gist.github.com/nguyendangminh/bd6e1e01df3c6cff139b1609fc1a646c)
 - [https://stackoverflow.com/questions/46100377/how-to-create-an-openssl-self-signed-certificate-using-san](https://stackoverflow.com/questions/46100377/how-to-create-an-openssl-self-signed-certificate-using-san)
 - [https://serverfault.com/questions/47876/handling-http-and-https-requests-using-a-single-port-with-nginx](https://serverfault.com/questions/47876/handling-http-and-https-requests-using-a-single-port-with-nginx)
+
+- [https://serverfault.com/questions/47876/handling-http-and-https-requests-using-a-single-port-with-nginx](https://serverfault.com/questions/47876/handling-http-and-https-requests-using-a-single-port-with-nginx)
